@@ -1,3 +1,0 @@
-GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-portfolio.datastructure.linkedlist,portfolio.datastructure.linkedlist,Node,0,51,0,4,0,15,0,10,0,8
-portfolio.datastructure.linkedlist,portfolio.datastructure.linkedlist,LinkedList,3,165,2,22,1,44,2,18,0,8
