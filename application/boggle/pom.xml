@@ -2,19 +2,62 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>jerryjasperson.portfolio.boggle.core</groupId>
-	<artifactId>boggle-core-parent</artifactId>
-	<name>Boggle - Core - Parent</name>
-	<packaging>pom</packaging>
-	<description>Parent POM for the Boggle Application</description>
-
 	<parent>
-		<groupId>jerryjasperson.portfolio.boggle</groupId>
-		<artifactId>boggle-super-parent</artifactId>
-		<version>1.0</version>
+		<groupId>jerryjasperson.portfolio</groupId>
+		<artifactId>application-parent</artifactId>
+		<version>1.0.0</version>
 	</parent>
 	
-	<modules>
-		<module>boggle-core-domain</module>
-	</modules>
+	<artifactId>boggle</artifactId>
+	<name>Boggle</name>
+	<description>Boggle Application</description>
+
+  <dependencies>
+  	<dependency>
+  		<groupId>jerryjasperson.portfolio</groupId>
+  		<artifactId>datastructure</artifactId>
+  	</dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  
+  <build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>coverage-initializer</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>coverage-report</id>
+						<phase>post-integration-test</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+  </build>
 </project>

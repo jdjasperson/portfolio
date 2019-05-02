@@ -3,37 +3,31 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>jerryjasperson.portfolio</groupId>
   <artifactId>datastructure</artifactId>
-  <version>0.0.1</version>
-  <packaging>pom</packaging>
-  <name>Portfolio - Parent - Data Structures</name>
-  <modules>
-    <module>linked-list</module>
-    <module>trie</module>
-  </modules>
-
+  <version>1.0.0</version>
+  <packaging>jar</packaging>
+  
+  <name>Portfolio - Data Structures</name>
+  
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.10</maven.compiler.source>
     <maven.compiler.target>1.10</maven.compiler.target>
   </properties>
 
-  <dependencyManagement>
-    <dependencies>
+  <dependencies>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>5.4.2</version>
+    </dependency>
       <dependency>
-        <groupId>org.junit.jupiter</groupId>
-        <artifactId>junit-jupiter-api</artifactId>
-        <version>5.4.2</version>
-      </dependency>
-        <dependency>
-        <groupId>org.junit.jupiter</groupId>
-        <artifactId>junit-jupiter-engine</artifactId>
-        <version>5.4.2</version>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
-
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>5.4.2</version>
+    </dependency>
+  </dependencies>
+ 
   <build>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
         <plugin>
@@ -67,11 +61,30 @@
           <artifactId>maven-jar-plugin</artifactId>
           <version>3.0.2</version>
         </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-install-plugin</artifactId>
-          <version>2.5.2</version>
-        </plugin>
+        
+				<plugin>
+				   <groupId>org.apache.maven.plugins</groupId>
+				   <artifactId>maven-install-plugin</artifactId>
+				   <version>2.5.2</version>
+<!-- 				   <configuration> -->
+<!-- 				      <groupId>org.somegroup</groupId> -->
+<!-- 				      <artifactId>someartifact</artifactId> -->
+<!-- 				      <version>1.0</version> -->
+<!-- 				      <packaging>jar</packaging> -->
+<!-- 				      <file>${basedir}/datastructure-1.0.jar</file> -->
+<!-- 				      <generatePom>true</generatePom> -->
+<!-- 				   </configuration> -->
+<!-- 				   <executions> -->
+<!-- 				      <execution> -->
+<!-- 				         <id>install-jar-lib</id> -->
+<!-- 				         <goals> -->
+<!-- 				            <goal>install-file</goal> -->
+<!-- 				         </goals> -->
+<!-- 				         <phase>validate</phase> -->
+<!-- 				      </execution> -->
+<!-- 				   </executions> -->
+				</plugin>
+				
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-deploy-plugin</artifactId>
@@ -89,7 +102,6 @@
           <version>3.0.0</version>
         </plugin>
       </plugins>
-    </pluginManagement>
   </build>
 
 </project>
