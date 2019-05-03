@@ -1,6 +1,7 @@
 package portfolio.application.boggle;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -13,20 +14,17 @@ public class BoggleTest {
 		"N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"
 	};
 	
-	private final static String BOGGLE_BOARD = "/Users/jerryjasperson/Desktop/Boggle/4x4.txt";
-	private final static String DICTIONARY_FILE   = "/Users/jerryjasperson/Desktop/Boggle/12dicts-5.0/2of12.txt";
-
 	@Test
 	public void test() {
 		try {
-			Boggle boggle = new Boggle(BOGGLE_BOARD, DICTIONARY_FILE);
+			Boggle boggle = new Boggle(BoggleTestResources.BOGGLE_BOARD, BoggleTestResources.DICTIONARY_FILE);
 			Boggle.Metrics bMetrics = boggle.findAllWords();
 			
 			ArrayList<String> words = bMetrics.getWordsFound();
 			System.out.println("Found a total of " + words.size() + " words in " + bMetrics.getTime() + " ms.");
-//			for (Iterator<String> i = words.iterator(); i.hasNext();) {
-//				System.out.println(i.next());
-//			}
+			for (Iterator<String> i = words.iterator(); i.hasNext();) {
+				System.out.println(i.next());
+			}
 		} catch(Exception e) {
 			e.printStackTrace();
 			Assertions.fail();
