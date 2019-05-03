@@ -18,14 +18,14 @@ public class Trie {
 	}
 	
 	// used for recursive graph traversal, no depth limit enforced
-	private ArrayList<String> getWords(TrieNodeV2 node) {
+	private ArrayList<String> getWords(TrieNode node) {
 		ArrayList<String> retval = new ArrayList<String>();
 		if (node.isWord(null)) {
 			retval.add(node.getPrefix());
 		}
 		
 		if (!node.isLeaf()) {
-			ArrayList<TrieNodeV2> children = node.getChildren();
+			ArrayList<TrieNode> children = node.getChildren();
 			for (int i = 0; i < children.size(); i++) {
 				retval.addAll(this.getWords(children.get(i)));
 			}
@@ -40,7 +40,7 @@ public class Trie {
 	 */
 	public void addWord(String aWord) {
 		String word = aWord.toLowerCase();
-		TrieNodeV2 currentNode = this.getNode(word); 
+		TrieNode currentNode = this.getNode(word); 
 		
 		String prefix = currentNode.getPrefix();
 		String tword = word.substring(prefix.length());
@@ -72,7 +72,7 @@ public class Trie {
 	 */
 	public boolean hasWord(String word) {
 		char [] cword = word.toCharArray();
-		TrieNodeV2 currentNode = root;
+		TrieNode currentNode = root;
 		for (int i = 0; i < cword.length; i++) {
 			currentNode = currentNode.getChild(cword[i]);
 			if (currentNode == null) {
@@ -96,10 +96,10 @@ public class Trie {
 	 * @param word
 	 * @return
 	 */
-	private TrieNodeV2 getNode(String word) {
+	private TrieNode getNode(String word) {
 		char [] cword = word.toCharArray();
 		
-		TrieNodeV2 currentNode = this.root;
+		TrieNode currentNode = this.root;
 		for (int i = 0; i < cword.length; i++) {
 			if (currentNode.hasChild(cword[i])) {
 				currentNode = currentNode.getChild(cword[i]);
