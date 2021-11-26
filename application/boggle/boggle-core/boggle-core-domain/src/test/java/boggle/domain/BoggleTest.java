@@ -7,7 +7,6 @@ import java.util.Iterator;
 import org.junit.Assert;
 import org.junit.Test;
 
-import boggle.domain.Boggle;
 
 public class BoggleTest {
 	private final static String [] alphabet = {
@@ -45,7 +44,6 @@ public class BoggleTest {
 	
 	private void printBoard(BoggleNode[] [] board) {
 		System.out.println("---------- Game Board ----------");
-		//System.out.println("   ");
 		for (int i = 0; i < board.length; i++) {
 			StringBuffer sb = new StringBuffer(board[0].length);
 			for (int j = 0; j < board[i].length; j++) {

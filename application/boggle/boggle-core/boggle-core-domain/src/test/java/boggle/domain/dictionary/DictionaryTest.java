@@ -3,8 +3,6 @@ package boggle.domain.dictionary;
 import org.junit.Assert;
 import org.junit.Test;
 
-import boggle.domain.dictionary.Dictionary;
-
 public class DictionaryTest {
 	public final static String DICTIONARY = "/Users/jerryjasperson/devhome/source/portfolio/boggle/resources/12dicts-5.0/2of12.txt";
 	

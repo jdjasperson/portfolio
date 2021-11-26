@@ -5,8 +5,6 @@ import java.util.ArrayList;
 import org.junit.Assert;
 import org.junit.Test;
 
-import boggle.domain.dictionary.trie.Trie;
-
 public class TrieTest {
 	private static String[] dictionary = {
 		"asset", "ass", "ascot", "ad", "administrator"
