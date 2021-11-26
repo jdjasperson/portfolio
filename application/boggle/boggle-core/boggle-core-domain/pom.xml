@@ -87,9 +87,9 @@
     </build>
     
     <dependencies>
-	<!-- Logging - Do not use commons logging!! log4j 2 is the one -->
-	<dependency>
-	    <groupId>org.slf4j</groupId>
+	<!-- Logging - Do not use commons logging!! log4j 2 is the one 
+		<dependency>
+		    <groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 		</dependency>
 		<dependency>
@@ -100,7 +100,7 @@
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-api</artifactId>
 		</dependency>
-			
+		-->	
 		<!-- Testing -->
 		<dependency>
 			<groupId>junit</groupId>
