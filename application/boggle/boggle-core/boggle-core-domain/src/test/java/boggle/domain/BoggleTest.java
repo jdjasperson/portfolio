@@ -14,13 +14,10 @@ public class BoggleTest {
 		"N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"
 	};
 	
-	private final static String BOGGLE_BOARD      = "/Users/jerryjasperson/devhome/source/portfolio/application/boggle/resources/4x4.txt";
-	private final static String DICTIONARY_FILE   = "/Users/jerryjasperson/devhome/source/portfolio/application/boggle/resources/12dicts-5.0/2+2lemma.txt";
-
 	@Test
 	public void test() {
 		try {
-			Boggle boggle = new Boggle(BOGGLE_BOARD, DICTIONARY_FILE);
+			Boggle boggle = new Boggle(TestConstant.BOGGLE_BOARD, TestConstant.DICTIONARY);
 			//this.printTMatrix(boggle.getBoard().getTransitionMatrix());
 			//this.printBoard(boggle.getBoard().getBoardMatrix());
 			Boggle.Metrics bMetrics = boggle.findAllWords();
