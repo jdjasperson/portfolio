@@ -131,39 +131,6 @@
 			</dependency>
 			<!-- Provided by container at runtime -->
 			
-			<!-- Logging stuff, cause it gets complicated really quick so let's organize here -->
-			<dependency>
-				<groupId>org.slf4j</groupId>
-				<artifactId>slf4j-api</artifactId>
-				<version>${org.slf4j.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.slf4j</groupId>
-				<artifactId>jcl-over-slf4j</artifactId>
-				<version>${org.slf4j.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.logging.log4j</groupId>
-				<artifactId>log4j-api</artifactId>
-				<version>${org.apache.logging.log4j.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.logging.log4j</groupId>
-				<artifactId>log4j-core</artifactId>
-				<version>${org.apache.logging.log4j.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.logging.log4j</groupId>
-				<artifactId>log4j-slf4j-impl</artifactId>
-				<version>${org.apache.logging.log4j.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.logging.log4j</groupId>
-				<artifactId>log4j-web</artifactId>
-				<version>${org.apache.logging.log4j.version}</version>
-				<scope>runtime</scope>
-			</dependency>
-			
 			<!-- Compile dependencies -->
 			<dependency>
 				<groupId>commons-lang</groupId>
@@ -197,8 +164,6 @@
 		<maven.test.skip>${env.MAVEN.TEST.SKIP}</maven.test.skip>
 		<maven.version.range>[2.2.1,3.1.0]</maven.version.range>
 		<maven.war.plugin.version>[2.13.2,)</maven.war.plugin.version>
-		<org.apache.logging.log4j.version>2.13.2</org.apache.logging.log4j.version>
-		<org.slf4j.version>1.7.10</org.slf4j.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 </project>
